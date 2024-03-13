@@ -27,7 +27,7 @@ android {
     }
     defaultConfig {
         applicationId = "com.hislbd.android.returnpayment"
-        minSdk = 24
+        minSdk = 27
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -62,7 +62,12 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.51")
     kapt("com.google.dagger:hilt-android-compiler:2.51")
 
-    //annotationProcessor 'com.google.dagger:hilt-compiler:2.51'
+    //csv
+    implementation("com.opencsv:opencsv:5.5.1")
+
+    //xlsx
+    implementation("org.apache.poi:poi:5.2.4")
+    implementation("org.apache.poi:poi-ooxml:5.2.4")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
